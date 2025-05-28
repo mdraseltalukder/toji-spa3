@@ -30,19 +30,19 @@ tl.fromTo(
     ease: "power2.out",
   }
 );
-// tl.fromTo(
-//   ".logo-img",
-//   {
-//     opacity: 0,
-//     scale: 1,
-//   },
-//   {
-//     scale: 1,
-//     opacity: 1,
-//     duration: 0.6,
-//     ease: "power2.out",
-//   }
-// );
+tl.fromTo(
+  "#logo-img",
+  {
+    opacity: 0,
+    scale: 1,
+  },
+  {
+    scale: 1,
+    opacity: 1,
+    duration: 0.6,
+    ease: "power2.out",
+  }
+);
 
 tl.fromTo(
   "#rock_left",
@@ -79,6 +79,25 @@ tl.fromTo(
 );
 
 // scroll animation
+
+gsap.delayedCall(tl.duration(), () => {
+  gsap.fromTo(
+    "#logo-img",
+    { scale: 1, opacity: 1 },
+    {
+      scrollTrigger: {
+        trigger: "#logo-img",
+        start: "top 20%",
+        end: "bottom 20%",
+        scrub: true,
+      },
+      scale: 0.5,
+      opacity: 0.5,
+      ease: "none",
+    }
+  );
+});
+
 gsap.fromTo(
   "#rock_right",
   {
@@ -115,24 +134,7 @@ gsap.fromTo(
     ease: "none",
   }
 );
-gsap.fromTo(
-  ".logo-img",
-  {
-    scale: 1,
-    opacity: 1,
-  },
-  {
-    scrollTrigger: {
-      trigger: ".logo-img",
-      start: "top 20%",
-      end: "bottom 20%",
-      scrub: true,
-    },
-    scale: 0.5,
-    opacity: 0.5,
-    ease: "none",
-  }
-);
+
 gsap.fromTo(
   "#hero-title",
   {
@@ -142,7 +144,7 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: "#hero-title",
-      start: "top 90%",
+      start: "top 80%",
       end: "bottom 60%",
       scrub: true,
     },

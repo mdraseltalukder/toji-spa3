@@ -242,7 +242,7 @@ a {
   background-position: center;
   transform-origin: center center;
   transform: translate(-50%, -50%) rotate(0deg) scale(1);
-  z-index: 1;
+  z-index: -1;
 }
 
 .section-title {
@@ -328,13 +328,22 @@ a {
   max-width: 360px;
   margin: 10px;
 }
-.border-bottom {
-  border-bottom: 1px solid #ffffff33;
+hr {
+  border: none;
+  background-color: #ffffff33;
+  height: 1px;
+  width: 95%;
 }
+.hr4,
+.hr5,
+.hr6 {
+  display: none;
+}
+
 .border-right {
   border-right: 1px solid #ffffff33;
 }
-.border-rounded {
+/* .border-rounded {
   border-right: 1px solid #ffffff33;
   border-bottom: 1px solid #ffffff33;
   position: relative;
@@ -353,12 +362,13 @@ a {
   width: 40px;
   z-index: 2;
   border-radius: 100%;
-}
+} */
 
 .tree_left {
   position: absolute;
   top: 0;
   left: -10%;
+  z-index: -1;
 }
 /* benefits */
 .benefit-sec {
@@ -893,6 +903,7 @@ a {
   position: absolute;
   top: 0%;
   right: -10%;
+  z-index: -1;
 }
 /* career */
 .career-hero {
@@ -1302,10 +1313,16 @@ a {
     justify-content: space-between;
     position: relative;
   }
-  .border-right,
-  .border-bottom,
-  .border-rounded {
-    border: none;
+  /* border */
+  .border2,
+  .border4 {
+    border-right: none;
+  }
+  .border3 {
+    border-right: 1px solid #ffffff33;
+  }
+  .hr4 {
+    display: block;
   }
   .bath-container {
     padding-bottom: 0;
@@ -1360,6 +1377,17 @@ a {
   nav.desktop-nav {
     display: none;
   }
+  .border2,
+  .border4,
+  .border3,
+  .border-right {
+    border-right: none;
+  }
+  .hr5,
+  .hr6 {
+    display: block;
+  }
+
   .header {
     display: flex;
     flex-direction: row;
