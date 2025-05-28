@@ -346,7 +346,8 @@ a {
   bottom: -19px;
   right: -19px;
   background-image: url(./img/about-bg.png);
-
+  background-size: contain;
+  background-position: center;
   background-color: #090909;
   height: 40px;
   width: 40px;
