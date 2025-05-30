@@ -784,7 +784,7 @@ hr {
   15%,
   100% {
     transform: scale(1);
-    background: rgb(162, 121, 55);
+    background: #d9d9d966;
   }
   5%,
   10% {
@@ -975,7 +975,7 @@ hr {
   text-align: center;
   padding-left: 80px;
   padding-right: 80px;
-  padding-bottom: 120px;
+  padding-bottom: 88px;
   position: relative;
 }
 
@@ -999,11 +999,12 @@ hr {
 .expertise-card h4 {
   margin-bottom: 12px;
 }
+
 .expertice-blur-img {
-  position: absolute;
-  top: 82%;
-  left: 0;
-  z-index: -1;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  height: 155px;
 }
 
 /* footer */
@@ -1369,7 +1370,7 @@ hr {
     grid-column: span 3;
   }
   .expertice-blur-img {
-    top: 90%;
+    height: 130px;
   }
 }
 
@@ -1396,6 +1397,10 @@ hr {
     padding: 16px 24px;
     position: relative;
     z-index: 10;
+    width: 100vw;
+    margin-bottom: 0;
+    background: #222222a6;
+    background-blend-mode: color;
   }
   .menu-icon {
     display: block;
@@ -1416,7 +1421,9 @@ hr {
   }
 
   .mobile-nav-list li {
-    margin: 16px 0;
+    padding: 16px 0;
+    width: 100%;
+    cursor: pointer;
   }
 
   .mobile-nav-list a {
@@ -1424,8 +1431,16 @@ hr {
     color: white;
     font-size: 18px;
   }
+  .mobile-nav-list li:hover a {
+    color: #daad63;
+  }
   .desktob-nav {
     display: none;
+  }
+  .header-section {
+    position: fixed;
+    top: 0;
+    z-index: 99;
   }
 
   #menu-toggle:checked ~ .overlay {
@@ -1435,7 +1450,7 @@ hr {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 9999;
   }
 
@@ -1615,7 +1630,7 @@ hr {
 
   .expertise {
     margin-left: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     margin-top: 100px;
   }
   .cert-logo {
@@ -1653,6 +1668,9 @@ hr {
   .rock_right {
     top: 50px;
     right: -10%;
+  }
+  .expertice-blur-img {
+    height: 100px;
   }
 }
 @media (max-width: 480px) {
@@ -1783,9 +1801,7 @@ hr {
   .nav-list {
     gap: 20px;
   }
-  .expertice-blur-img {
-    top: 93%;
-  }
+
   .group-img1 {
     padding: 15px;
   }
@@ -1799,5 +1815,8 @@ hr {
   .rock_right {
     top: 50px;
     right: -20%;
+  }
+  .expertice-blur-img {
+    height: 50px;
   }
 }
